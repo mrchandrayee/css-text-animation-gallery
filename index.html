@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d19">
+  <title>CSS Text Animation Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="page-heading">
+      <h1>CSS Text Animation</h1>
+      <p>Five creative text effects made with pure CSS</p>
+    </header>
+
+    <section class="gallery" aria-label="CSS text animation examples">
+      <article class="animation-card">
+        <div class="preview">
+          <span class="preview-label">PREVIEW</span>
+          <div class="preview-content">
+            <h2 class="typewriter">Hello!</h2>
+            <p>Typewriter Animation</p>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-title-row"><h3>Typewriter Text</h3><button class="copy-btn" data-snippet="typewriter">Copy CSS</button></div>
+          <p class="description">Text appears one character at a time, like a classic typewriter.</p>
+          <pre><code>.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #60a5fa;
+  animation: typing 2.5s steps(7) infinite,
+             blink .7s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 7ch; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}</code></pre>
+        </div>
+      </article>
+
+      <article class="animation-card">
+        <div class="preview">
+          <span class="preview-label">PREVIEW</span>
+          <div class="preview-content">
+            <h2 class="fade-up">Fade Up</h2>
+            <p>Fade Up Motion</p>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-title-row"><h3>Fade In Up</h3><button class="copy-btn" data-snippet="fade">Copy CSS</button></div>
+          <p class="description">The text smoothly rises into place while fading in.</p>
+          <pre><code>.fade-up {
+  animation: fadeUp 2s ease-in-out infinite;
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}</code></pre>
+        </div>
+      </article>
+
+      <article class="animation-card">
+        <div class="preview">
+          <span class="preview-label">PREVIEW</span>
+          <div class="preview-content">
+            <h2 class="glow">Glow Text</h2>
+            <p>Neon Glow Pulse</p>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-title-row"><h3>Glow Pulse</h3><button class="copy-btn" data-snippet="glow">Copy CSS</button></div>
+          <p class="description">A neon cyan glow pulses around the text for a luminous effect.</p>
+          <pre><code>.glow {
+  color: #00eaff;
+  text-shadow: 0 0 5px #00eaff,
+               0 0 10px #00eaff,
+               0 0 20px #00eaff;
+  animation: glowPulse 1.5s ease-in-out infinite alternate;
+}
+@keyframes glowPulse {
+  from { text-shadow: 0 0 5px #00eaff; }
+  to {
+    text-shadow: 0 0 10px #00eaff,
+                 0 0 25px #00eaff,
+                 0 0 40px #00eaff;
+  }
+}</code></pre>
+        </div>
+      </article>
+
+      <article class="animation-card">
+        <div class="preview">
+          <span class="preview-label">PREVIEW</span>
+          <div class="preview-content">
+            <h2 class="bounce" aria-label="BOUNCE"><span>B</span><span>O</span><span>U</span><span>N</span><span>C</span><span>E</span></h2>
+            <p>Letter Bounce Animation</p>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-title-row"><h3>Bounce Letters</h3><button class="copy-btn" data-snippet="bounce">Copy CSS</button></div>
+          <p class="description">Each letter bounces with a small delay, creating a wave-like rhythm.</p>
+          <pre><code>.bounce span {
+  display: inline-block;
+  animation: bounce 1s ease-in-out infinite;
+}
+.bounce span:nth-child(2) { animation-delay: .1s; }
+.bounce span:nth-child(3) { animation-delay: .2s; }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}</code></pre>
+        </div>
+      </article>
+
+      <article class="animation-card">
+        <div class="preview">
+          <span class="preview-label">PREVIEW</span>
+          <div class="preview-content">
+            <h2 class="wave">WAVETEXT</h2>
+            <p>Wave Animation</p>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-title-row"><h3>Wave Text</h3><button class="copy-btn" data-snippet="wave">Copy CSS</button></div>
+          <p class="description">Letters move up and down in sequence to create a flowing wave.</p>
+          <pre><code>.wave span {
+  display: inline-block;
+  animation: wave 1.2s ease-in-out infinite;
+}
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}</code></pre>
+        </div>
+      </article>
+    </section>
+    <footer>HTML <span>•</span> CSS <span>•</span> VANILLA JAVASCRIPT</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
